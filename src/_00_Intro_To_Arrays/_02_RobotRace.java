@@ -23,6 +23,10 @@ public class _02_RobotRace {
 			for (int i = 0; i < robos.length; i++) {
 				int random = ran.nextInt(50);
 				robos[i].move(random);
+				if (robos[i].getY() < 10) {
+					top = true;
+					JOptionPane.showMessageDialog(null, "Congrats! Robot " + i+1 + " has won the race!");
+				}
 			}
 		}
 	}
